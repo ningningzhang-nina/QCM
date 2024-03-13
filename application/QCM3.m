@@ -6,7 +6,11 @@ for i = 1:length(indexes)
     yyyy = readtable(sprintf('./data/%s.xlsx',indexes{i}));
     yyy = yyyy(:,2);
     yy = yyy{1:end,1};
-    yy = wrev(yy);
+    if i==3
+        yy=1./wrev(yy);
+    else
+        yy = wrev(yy);
+    end
     y = (log(yy(2:end))-log(yy(1:end-1)))*100;
 
     pp = 0.01:0.01:0.99;
@@ -28,9 +32,9 @@ for i = 1:length(indexes)
         end
     end
     save(sprintf('final_%s_quantiles.mat',indexes{i}),"dqtest_in","Q_hat","y",'res')
-    [moments,pvalues] = estimate_moments(y,Q_hat,dqtest_in,pp);
+    [moments] = estimate_moments(y,Q_hat,dqtest_in,pp);
     save(sprintf('final_%s_moments.mat',indexes{i}))
-    clear dqtest_in pp pvalues Q_hat se_hat y res moments DnI_star cvm_pvalues DnI DnC_star DnC outputs
+    clear dqtest_in pp Q_hat se_hat y res moments DnI_star cvm_pvalues DnI DnC_star DnC outputs
 end
 
 
