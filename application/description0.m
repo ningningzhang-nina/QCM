@@ -6,9 +6,11 @@ for i = 1:length(indexes)
     yyyy = readtable(sprintf('./data/%s.xlsx',indexes{i}));
     yyy = yyyy(:,2);
     yy = yyy{1:end,1};
-    yy = wrev(yy);
+    
     if i==3
         yy=1./wrev(yy);
+    else
+        yy = wrev(yy);
     end
 
     y = (log(yy(2:end))-log(yy(1:end-1)))*100;
@@ -24,7 +26,7 @@ end
 clear all
 indexe = {'AUD_USD','NZD_USD','CAD_USD'};
 
-for ii = 1
+for ii = 1:3
     load(sprintf('final_%s_moments.mat',indexe{ii}))
     n = length(y);
     m = mean(y);
