@@ -14,7 +14,7 @@ for i =1:length(indexes)
     y = (log(yy(2:end))-log(yy(1:end-1)))*100;
     s=201;
     for j=s:500
-        load(sprintf('final_%s_moments_%d.mat',indexes{i},j))
+        load(sprintf('./results/final_%s_moments_%d.mat',indexes{i},j))
         newy=y(1:end-500+j)';
         X0=ones(length(newy),1);
         threshold_variable=[0;newy(1:end-1)'];
