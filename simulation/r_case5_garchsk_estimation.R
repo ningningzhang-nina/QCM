@@ -1,7 +1,7 @@
 library("R.matlab")
 library("GARCHSK")
 library("MASS")
-setwd("/Users/gina/Downloads/Research/2.QCM/Code files/final_simulation")
+setwd("/Users/gina/Downloads/Research/2.QCM/Code files/final_simulation/results/")
 #######CASE 1
 #xdata<-readMat("new_simulation_garch.mat")
 xdata<-readMat("new_DGP1_garch.mat")
