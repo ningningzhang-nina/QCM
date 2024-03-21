@@ -29,7 +29,7 @@ for i = 2
         end
     end
     [moments] = newest_estimate_moments(Q_hat,dqtest_in,pp);
-    save(sprintf('final_%s_moments_%d.mat',indexes{i},j))
+    save(sprintf('./results/final_%s_moments_%d.mat',indexes{i},j))
     clear dqtest_in pp pvalues Q_hat se_hat newy moments DnI_star cvm_pvalues DnI DnC_star DnC outputs
     end
     
