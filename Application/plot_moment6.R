@@ -1,6 +1,6 @@
 library(R.matlab)
 library(latex2exp)
-setwd("/Users/gina/Downloads/application/")
+setwd("/Users/gina/Downloads/application/results/")
 
 setEPS()
 postscript("qcm.eps",width=18,height=4)
