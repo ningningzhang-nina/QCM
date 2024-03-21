@@ -207,4 +207,4 @@ for threshold=[0,0.1,0.3,0.5]
     end
     
 end
-save('DGP5_arma_mx_garch.mat')
+save('./results/DGP5_arma_mx_garch.mat')
