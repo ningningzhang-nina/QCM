@@ -31,9 +31,9 @@ for i = 1:length(indexes)
             toc;
         end
     end
-    save(sprintf('final_%s_quantiles.mat',indexes{i}),"dqtest_in","Q_hat","y",'res')
+    save(sprintf('./results/final_%s_quantiles.mat',indexes{i}),"dqtest_in","Q_hat","y",'res')
     [moments] = estimate_moments(y,Q_hat,dqtest_in,pp);
-    save(sprintf('final_%s_moments.mat',indexes{i}))
+    save(sprintf('./results/final_%s_moments.mat',indexes{i}))
     clear dqtest_in pp Q_hat se_hat y res moments DnI_star cvm_pvalues DnI DnC_star DnC outputs
 end
 
@@ -52,7 +52,7 @@ for i = 3
     y = (log(yy(2:end))-log(yy(1:end-1)))*100;
     res = CAD_USD_residual(y');
     [~,DnC,DnC_star,DnI,DnI_star,cvm_pvalues] = CvM_test_tar_CAD_USD(y',100);
-    save(sprintf('new_new_CAD_USD_cvm_test.mat',indexes{i}))
+    save(sprintf('./results/new_new_CAD_USD_cvm_test.mat',indexes{i}))
 %     pp = 0.01:0.01:0.99;
 %     cnt = 0;
 %     for ppp = pp
