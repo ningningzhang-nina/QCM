@@ -4,7 +4,7 @@ indexes = {'AUD_USD','NZD_USD','USD_CAD'};
 results = zeros(5,3);
 for i = 1:length(indexes)
     yyyy = readtable(sprintf('./data/%s.xlsx',indexes{i}));
-    yyy = yyyy(:,2);
+    yyy = yyyy(:,4);
     yy = yyy{1:end,1};
     
     if i==3
