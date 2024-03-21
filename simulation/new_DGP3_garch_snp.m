@@ -191,7 +191,7 @@ for threshold=[0,0.1,0.3,0.5]
         end
     end
 end
-save("new_DGP3_garch_snp.mat")
+save("./results/new_DGP3_garch_snp.mat")
 
 
 function h=H(k,x)
