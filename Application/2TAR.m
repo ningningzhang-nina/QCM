@@ -57,7 +57,7 @@ for i = 1:length(indexes)
         res = USD_CAD_residual(y');
         [~,DnC,DnC_star,DnI,DnI_star,cvm_pvalues] = CvM_test_tar_CAD_USD(y',nboot);
     end
-    save(sprintf('new_new_%s_cvm_test.mat',indexes{i}))
+    save(sprintf('./results/new_new_%s_cvm_test.mat',indexes{i}))
 end
 %%
 
@@ -109,5 +109,5 @@ end
 %     res = CAD_USD_residual(y');
 %     [~,DnC,DnC_star,DnI,DnI_star,cvm_pvalues] = CvM_test_tar_CAD_USD(y',nboot);
 % 
-%     save(sprintf('new_new_CAD_USD_cvm_test.mat',indexes{i}))
+%     save(sprintf('./results/new_new_CAD_USD_cvm_test.mat',indexes{i}))
 % end
