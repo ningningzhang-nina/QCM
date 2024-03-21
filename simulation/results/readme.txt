@@ -1,1 +1,1 @@
-
+The files of new_DGP1_garch.mat, new_DGP2_studentt.mat, new_DGP3_garch_snp.mat, DGP5_arma_mx_garch.mat, new_dpg4_gir_skew_studentt.mat are too big (larger than 25KB), which can not be uploaded to git. So please run it by yourself.
