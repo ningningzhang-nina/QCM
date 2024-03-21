@@ -1,7 +1,7 @@
 library(R.matlab)
 library(ggplot2)
 library(latex2exp)
-setwd("/Users/gina/Downloads/Research/2.QCM/Code files/final_simulation")
+setwd("/Users/gina/Downloads/Research/2.QCM/Code files/final_simulation/results/")
 dgp1<-readMat("new_DGP1_garch.mat")
 dgp2<-readMat("new_DGP2_studentt.mat")
 dgp3<-readMat("new_DGP3_garch_snp.mat")
