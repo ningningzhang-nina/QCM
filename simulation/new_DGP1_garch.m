@@ -156,4 +156,4 @@ for threshold=[0,0.1,0.3,0.5]
         end
     end
 end
-save("new_DGP1_garch.mat")
+save("./results/new_DGP1_garch.mat")
