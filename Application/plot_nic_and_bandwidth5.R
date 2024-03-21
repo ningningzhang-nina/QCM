@@ -11,7 +11,7 @@ source("threshold_reverse_quadratic_regression.R")
 indexnames<-list('AUD_USD','NZD_USD','CAD_USD')
 coef <- matrix(nrow = 3, ncol = 3)
 adjusted_rsquare <- matrix(nrow = 3, ncol = 6)
-b=readMat("nic_bandwidth.mat")
+b=readMat("./results/nic_bandwidth.mat")
 b1=b$b1
 b2=b$b2
 b3=b$b3
@@ -19,7 +19,7 @@ b3=b$b3
 # b2=matrix(,nrow=8,ncol=3)
 # b3=matrix(,nrow=8,ncol=3)
 setEPS()
-postscript("NIC.eps",width=6,height=6)
+postscript("./results/NIC.eps",width=6,height=6)
 par(mfrow=c(3,3),mar=c(1.5,2.5,2,0.1),mgp = c(1.5, 0.4, 0),font.lab=1.5, font.main=1.5)
 new_indexnames<-list('AUD/USD','NZD/USD','CAD/USD')
 #moments_names <- list(TeX(r'($g_h(\cdot)$)'), TeX(r'($g_s(\cdot)$)'), TeX(r'($g_k(\cdot)$)'))
