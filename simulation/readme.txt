@@ -9,3 +9,10 @@ step 2: run r_case5_garchsk_estimation.R to get the garchsk model results.
 step 3: run plot_simulation_boxplot.R to get Figures 1-5;
 step 4: run plot_threshold_boxplot.R to get Figures B1-5;
 step 5: run plot_5dgp_means.R to get Figure B6; run plot_5dgp_sd.R to get Figure B7;
+
+S.1.6. Additional simulations in the presence of infinite variance
+Run 
+
+S1.7. Additional simulations in the presence of highly skewed data
+
+S1.8. Additional simulations in the presence of highly heavy-tailed data
